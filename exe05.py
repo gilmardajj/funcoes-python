@@ -13,9 +13,16 @@ def calculadora(a, b, operacao):
     else:
         return "Operação inválida"
 
-# Exemplo de uso da função
-resultado = calculadora(4, 2, "soma")
-print(f"O resultado da operação é: {resultado}")
+# # Exemplo de uso da função
+# resultado = calculadora(4, 2, "soma")
+# print(f"O resultado da operação é: {resultado}")
+
+#ou
+resultado = int(input("Digite o primeiro número: "))
+resultado2 = int(input("Digite o segundo número: "))
+operacao = input("Digite a operação (soma, subtracao, multiplicacao, divisao): ")
+resultado_final = calculadora(resultado, resultado2, operacao)
+print(f"O resultado da operação é: {resultado_final}")
 
 
 # Ou
