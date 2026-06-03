@@ -1,4 +1,5 @@
 def fatorial(n):
+    """Função que recebe um número e retorna o seu fatorial."""
     res = 1
     for i in range(1, n + 1):
         res *= i
@@ -6,8 +7,9 @@ def fatorial(n):
 
 # print(fatorial(5))
 
-num = int(input("Digite um número para calcular o fatorial: "))
-print(f"O fatorial de {num} é: {fatorial(num)}")
+if __name__ == "__main__":
+    num = int(input("Digite um número para calcular o fatorial: "))
+    print(f"O fatorial de {num} é: {fatorial(num)}")
 
 
 # def fatorial(n):
