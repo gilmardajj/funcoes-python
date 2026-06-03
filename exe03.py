@@ -1,4 +1,5 @@
 def par_ou_impar(numero):
+    """Função que recebe um número e retorna se ele é par ou ímpar."""
     if numero % 2 == 0:
         return "Par"
     else:
@@ -17,7 +18,7 @@ def par_ou_impar(numero):
 
 
 
-
-numero = int(input("Digite um número: "))
-resultado = par_ou_impar(numero)
-print(f"O número {numero} é {resultado}.")
+if __name__ == "__main__":
+    numero = int(input("Digite um número: "))
+    resultado = par_ou_impar(numero)
+    print(f"O número {numero} é {resultado}.")
