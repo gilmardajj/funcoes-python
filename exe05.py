@@ -1,4 +1,5 @@
 def calculadora(a, b, operacao):
+    """Função que recebe dois números e uma operação, e retorna o resultado da operação."""
     if operacao == "soma":
         return a + b
     elif operacao == "subtracao":
@@ -18,11 +19,12 @@ def calculadora(a, b, operacao):
 # print(f"O resultado da operação é: {resultado}")
 
 #ou
-resultado = int(input("Digite o primeiro número: "))
-resultado2 = int(input("Digite o segundo número: "))
-operacao = input("Digite a operação (soma, subtracao, multiplicacao, divisao): ")
-resultado_final = calculadora(resultado, resultado2, operacao)
-print(f"O resultado da operação é: {resultado_final}")
+if __name__ == "__main__":
+    resultado = int(input("Digite o primeiro número: "))
+    resultado2 = int(input("Digite o segundo número: "))
+    operacao = input("Digite a operação (soma, subtracao, multiplicacao, divisao): ")
+    resultado_final = calculadora(resultado, resultado2, operacao)
+    print(f"O resultado da operação é: {resultado_final}")
 
 
 # Ou
