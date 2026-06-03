@@ -1,6 +1,7 @@
 def saudacao(nome):
-    print(f"Olá, {nome}!")
+    """Função que recebe um nome e retorna uma saudação personalizada."""
+    return f"Olá, {nome}!"
 
 
-
-saudacao("Rafael")
+if __name__ == "__main__":
+    print(saudacao("Rafael"))
