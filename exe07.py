@@ -8,6 +8,7 @@ def fatorial(n):
 # print(fatorial(5))
 
 if __name__ == "__main__":
+    
     num = int(input("Digite um número para calcular o fatorial: "))
     print(f"O fatorial de {num} é: {fatorial(num)}")
 
