@@ -5,6 +5,10 @@ import exe04
 import exe05
 import exe06
 import exe07
+import exe08
+import exe09
+import exe10
+import exe11
 
 while True:
     print("Menu de Exercícios:")
@@ -15,6 +19,10 @@ while True:
     print("5. Calculadora simples")
     print("6. Contar o número de vogais em um texto")
     print("7. Calcular o fatorial de um número")
+    print("8. Calcular a média de uma lista de números")
+    print("9. Contador regressivo")
+    print("10. Login")
+    print("11. Verificar se um texto é um palíndromo")
     print("0. Sair")
 
     escolha = input("Digite o número do exercício que deseja executar: ")
@@ -54,8 +62,43 @@ while True:
         num = int(input("Digite um número para calcular o fatorial: "))
         print(f"O fatorial de {num} é: {exe07.fatorial(num)}")
 
+    elif escolha == "8":
+        num = int(input("Quantos números você deseja inserir para calcular a média? "))
+        numeros = []
+        for i in range(num):
+            numero = float(input(f"Digite o número {i+1}: "))
+            numeros.append(numero)
+        resultado = exe08.media_lista(numeros)
+        print(f"A média é: {resultado}")
+    
+    elif escolha == "9":
+        n = int(input("Digite um número para o contador regressivo: "))
+        print("Contador Regressivo:")
+        exe09.contador_regressivo(n)
+
+    elif escolha == "10":
+        print("Digite suas credenciais para login:")
+        print("Utilize apenas números para a senha.")
+        
+        # .strip().lower() ajuda a evitar erros com espaços ou letras maiúsculas
+        usuario = input("Digite o nome de usuário: ").strip().lower()
+        
+        # A senha entra como texto ("1234") .strip() remove espaços extras, mas não converte para número, pois a função login espera uma string
+        senha = input("Digite a senha: ").strip()
+        
+        resultado = exe10.login(usuario, senha)
+        print(resultado)
+
+    elif escolha == "11":
+        texto = input("Digite um texto para verificar se é um palíndromo: ")
+        if exe11.palindromo(texto):
+            print(f'"{texto}" é um palíndromo. True')
+        else:
+            print(f'"{texto}" não é um palíndromo. False')
+
     elif escolha == "0":
         print("Saindo do programa...")
         break
+
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
